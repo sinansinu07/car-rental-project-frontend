@@ -1,7 +1,7 @@
 import axios from "axios";
 import {render} from "../apis/api"
 
-export const startGetAllCars = (id) => {
+export const startGetAllCars = () => {
     return async (dispatch) => {
         try {
             const response = await axios.get(`${render}/api/cars`)
@@ -21,22 +21,22 @@ const setAllCars = (AllCars) => {
     }
 }
 
-export const startGetCars = (id) => {
-    return async (dispatch) => {
-        try {
-            const response = await axios.get(`${render}/api/${id}/cars`)
-            dispatch(setCars(response.data))
-            console.log(response.data)
-        } catch(err) {
-            console.log(err)
-            alert(err.message)
-        }
-    }
-}
+// export const startGetCars = (id) => {
+//     return async (dispatch) => {
+//         try {
+//             const response = await axios.get(`${render}/api/${id}/cars`)
+//             dispatch(setCars(response.data))
+//             console.log(response.data)
+//         } catch(err) {
+//             console.log(err)
+//             alert(err.message)
+//         }
+//     }
+// }
 
-const setCars = (cars) => {
-    return {
-        type: "SET_CARS",
-        payload: cars
-    }
-}
+// const setCars = (cars) => {
+//     return {
+//         type: "SET_CARS",
+//         payload: cars
+//     }
+// }

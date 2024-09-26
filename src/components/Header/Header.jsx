@@ -35,15 +35,18 @@ const Header = () => {
         <Container>
           <div className="navigation__wrapper d-flex align-items-center justify-content-between">
             <div className="logo">
-                <h1>
-                  <Link to="/home" className=" d-flex align-items-center gap-2">
-                    <i class="ri-car-line"></i>
-                    <span>
-                      Rent Car <br /> Service
-                    </span>
-                  </Link>
-                </h1>
-              </div>
+              <h1>
+                <Link to="/home" className=" d-flex align-items-center gap-2">
+                  <i class="ri-car-line"></i>
+                  <span>
+                    Rent Car <br /> Service
+                  </span>
+                </Link>
+              </h1>
+            </div>
+            <span className="mobile__menu">
+              <i class="ri-menu-line" onClick={toggleMenu}></i>
+            </span>
             <div className="navigation" ref={menuRef} onClick={toggleMenu}>
               <div className="menu">
                 {navLinks.map((item, index) => (

@@ -17,7 +17,7 @@ const CarListing = () => {
   const [filterBy, setFilterBy] = useState("")
   const [search, setSearch] = useState("")
 
-  console.log(search)
+  // console.log(search)
   return (
     <Helmet title="Cars">
       <CommonSection title="Car Listing" />

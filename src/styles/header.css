@@ -168,6 +168,11 @@
     display: none;
   }
 
+  .main__navbar {
+    display: flex;
+    height: 130px;
+  }
+
   .mobile__menu {
     display: block;
   }
